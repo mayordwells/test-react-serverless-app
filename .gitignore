@@ -1,6 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 # package directories
 node_modules
 jspm_packages
 
-# Serverless directories
-.serverless
+# dependencies
+test-react-serverless-app/node_modules
+test-react-serverless-app/.pnp
+test-react-serverless-app/.pnp.js
+
+# testing
+test-react-serverless-app /coverage
+
+# production
+test-react-serverless-app /build
+
+# misc
+test-react-serverless-app/.DS_Store
+test-react-serverless-app/.env.local
+test-react-serverless-app/.env.development.local
+test-react-serverless-app/.env.test.local
+test-react-serverless-app/.env.production.local
+
+test-react-serverless-app/npm-debug.log*
+test-react-serverless-app/yarn-debug.log*
+test-react-serverless-app/yarn-error.log*
