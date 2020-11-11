@@ -1,0 +1,20 @@
+service: serverless-react
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: nodejs12.x
+
+functions:
+
+# Cloudformation resource templates
+resources:
+  # S3
+  - ${file(resources/s3-bucket.yml)}
+  # CloudFront
+  - ${file(resources/cloudfront.yml)}
+  # CodeBuild
+  - ${file(resources/codebuild.yml)}
+  # CodePipeline
+  - ${file(resources/codepipeline.yml)}
