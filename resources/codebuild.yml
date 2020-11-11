@@ -12,12 +12,15 @@ Resources:
         # Linux container with node installed
         ComputeType: BUILD_GENERAL1_SMALL
         Type: LINUX_CONTAINER
-        Image: "aws/codebuild/standard:3.0"
+        Image: "aws/codebuild/standard:4.0"
       Source:
         Type: CODEPIPELINE
         BuildSpec: !Sub |
           version: 0.2
           phases:
+            install:
+              runtime-versions:
+                nodejs: 12
             pre_build:
               commands:
                 - echo Change directory...
