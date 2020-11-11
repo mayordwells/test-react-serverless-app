@@ -307,7 +307,7 @@
                       "Configuration": {
                         "Owner": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:SourceRepoOwner}}",
                         "Repo": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:SourceRepoName}}",
-                        "Branch": "master",
+                        "Branch": "main",
                         "OAuthToken": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:GitHubPersonalAccessToken}}"
                       }
                     }
@@ -751,7 +751,7 @@
                     "Configuration": {
                       "Owner": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:SourceRepoOwner}}",
                       "Repo": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:SourceRepoName}}",
-                      "Branch": "master",
+                      "Branch": "main",
                       "OAuthToken": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:GitHubPersonalAccessToken}}"
                     }
                   }
@@ -899,7 +899,7 @@
     "isDashboardMonitoringPreconfigured": false
   },
   "package": {
-    "artifactDirectoryName": "serverless/serverless-react/dev/1605109542815-2020-11-11T15:45:42.815Z",
+    "artifactDirectoryName": "serverless/serverless-react/dev/1605110669405-2020-11-11T16:04:29.405Z",
     "artifact": ""
   }
 }

@@ -294,7 +294,7 @@
                 "Configuration": {
                   "Owner": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:SourceRepoOwner}}",
                   "Repo": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:SourceRepoName}}",
-                  "Branch": "master",
+                  "Branch": "main",
                   "OAuthToken": "{{resolve:secretsmanager:test-react-serverless-app-credentials:SecretString:GitHubPersonalAccessToken}}"
                 }
               }
