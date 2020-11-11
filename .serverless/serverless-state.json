@@ -71,6 +71,7 @@
           },
           "Website": {
             "Type": "AWS::S3::Bucket",
+            "DeletionPolicy": "Retain",
             "Properties": {
               "WebsiteConfiguration": {
                 "ErrorDocument": "index.html",
@@ -160,7 +161,7 @@
               "Source": {
                 "Type": "CODEPIPELINE",
                 "BuildSpec": {
-                  "Fn::Sub": "version: 0.2\nphases:\n  pre_build:\n    commands:\n      - echo Change directory...\n      - cd static-site\n      - echo List directory files...\n      - ls\n      - echo Installing source NPM dependencies...\n      - npm install\n  build:\n    commands:\n      - echo List active directory...\n      - ls\n      - echo Build started on `date`\n      - npm run build\n  post_build:\n    commands:\n      # copy the contents of /build to S3\n      - aws s3 cp --recursive --acl public-read ./build s3://serverless-react-dev-website-1rv0904bpv8dd\n      # set the cache-control headers for service-worker.js to prevent\n      # browser caching\n      - >\n        aws s3 cp --acl public-read\n        --cache-control=\"max-age=0, no-cache, no-store, must-revalidate\"\n        ./build/service-worker.js s3://serverless-react-dev-website-1rv0904bpv8dd\n      # set the cache-control headers for index.html to prevent\n      # browser caching\n      - >\n        aws s3 cp --acl public-read\n        --cache-control=\"max-age=0, no-cache, no-store, must-revalidate\"\n        ./build/index.html s3://serverless-react-dev-website-1rv0904bpv8dd\nartifacts:\n  files:\n    - '**/*'\n"
+                  "Fn::Sub": "version: 0.2\nphases:\n  pre_build:\n    commands:\n      - echo Change directory...\n      - cd test-react-serverless-app\n      - echo List directory files...\n      - ls\n      - echo Installing source NPM dependencies...\n      - npm install\n  build:\n    commands:\n      - echo List active directory...\n      - ls\n      - echo Build started on `date`\n      - npm run build\n  post_build:\n    commands:\n      # copy the contents of /build to S3\n      - aws s3 cp --recursive --acl public-read ./build s3://serverless-react-dev-website-1jicr0gbcyp0s\n      # set the cache-control headers for service-worker.js to prevent\n      # browser caching\n      - >\n        aws s3 cp --acl public-read\n        --cache-control=\"max-age=0, no-cache, no-store, must-revalidate\"\n        ./build/service-worker.js s3://serverless-react-dev-website-1jicr0gbcyp0s\n      # set the cache-control headers for index.html to prevent\n      # browser caching\n      - >\n        aws s3 cp --acl public-read\n        --cache-control=\"max-age=0, no-cache, no-store, must-revalidate\"\n        ./build/index.html s3://serverless-react-dev-website-1jicr0gbcyp0s\nartifacts:\n  files:\n    - '**/*'\n"
                 }
               }
             }
@@ -515,6 +516,7 @@
       "Resources": {
         "Website": {
           "Type": "AWS::S3::Bucket",
+          "DeletionPolicy": "Retain",
           "Properties": {
             "WebsiteConfiguration": {
               "ErrorDocument": "index.html",
@@ -604,7 +606,7 @@
             "Source": {
               "Type": "CODEPIPELINE",
               "BuildSpec": {
-                "Fn::Sub": "version: 0.2\nphases:\n  pre_build:\n    commands:\n      - echo Change directory...\n      - cd static-site\n      - echo List directory files...\n      - ls\n      - echo Installing source NPM dependencies...\n      - npm install\n  build:\n    commands:\n      - echo List active directory...\n      - ls\n      - echo Build started on `date`\n      - npm run build\n  post_build:\n    commands:\n      # copy the contents of /build to S3\n      - aws s3 cp --recursive --acl public-read ./build s3://serverless-react-dev-website-1rv0904bpv8dd\n      # set the cache-control headers for service-worker.js to prevent\n      # browser caching\n      - >\n        aws s3 cp --acl public-read\n        --cache-control=\"max-age=0, no-cache, no-store, must-revalidate\"\n        ./build/service-worker.js s3://serverless-react-dev-website-1rv0904bpv8dd\n      # set the cache-control headers for index.html to prevent\n      # browser caching\n      - >\n        aws s3 cp --acl public-read\n        --cache-control=\"max-age=0, no-cache, no-store, must-revalidate\"\n        ./build/index.html s3://serverless-react-dev-website-1rv0904bpv8dd\nartifacts:\n  files:\n    - '**/*'\n"
+                "Fn::Sub": "version: 0.2\nphases:\n  pre_build:\n    commands:\n      - echo Change directory...\n      - cd test-react-serverless-app\n      - echo List directory files...\n      - ls\n      - echo Installing source NPM dependencies...\n      - npm install\n  build:\n    commands:\n      - echo List active directory...\n      - ls\n      - echo Build started on `date`\n      - npm run build\n  post_build:\n    commands:\n      # copy the contents of /build to S3\n      - aws s3 cp --recursive --acl public-read ./build s3://serverless-react-dev-website-1jicr0gbcyp0s\n      # set the cache-control headers for service-worker.js to prevent\n      # browser caching\n      - >\n        aws s3 cp --acl public-read\n        --cache-control=\"max-age=0, no-cache, no-store, must-revalidate\"\n        ./build/service-worker.js s3://serverless-react-dev-website-1jicr0gbcyp0s\n      # set the cache-control headers for index.html to prevent\n      # browser caching\n      - >\n        aws s3 cp --acl public-read\n        --cache-control=\"max-age=0, no-cache, no-store, must-revalidate\"\n        ./build/index.html s3://serverless-react-dev-website-1jicr0gbcyp0s\nartifacts:\n  files:\n    - '**/*'\n"
               }
             }
           }
@@ -899,7 +901,7 @@
     "isDashboardMonitoringPreconfigured": false
   },
   "package": {
-    "artifactDirectoryName": "serverless/serverless-react/dev/1605110669405-2020-11-11T16:04:29.405Z",
+    "artifactDirectoryName": "serverless/serverless-react/dev/1605115042904-2020-11-11T17:17:22.904Z",
     "artifact": ""
   }
 }

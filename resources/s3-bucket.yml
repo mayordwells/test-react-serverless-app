@@ -1,6 +1,7 @@
 Resources:
   Website:
     Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
     Properties:
       WebsiteConfiguration:
         ErrorDocument: index.html
