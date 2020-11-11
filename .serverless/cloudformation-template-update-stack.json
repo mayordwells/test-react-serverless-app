@@ -143,7 +143,7 @@
         "Environment": {
           "ComputeType": "BUILD_GENERAL1_SMALL",
           "Type": "LINUX_CONTAINER",
-          "Image": "aws/codebuild/nodejs:12"
+          "Image": "aws/codebuild/nodejs:12.18.0"
         },
         "Source": {
           "Type": "CODEPIPELINE",

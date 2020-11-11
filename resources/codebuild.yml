@@ -12,7 +12,7 @@ Resources:
         # Linux container with node installed
         ComputeType: BUILD_GENERAL1_SMALL
         Type: LINUX_CONTAINER
-        Image: "aws/codebuild/nodejs:12.18.0"
+        Image: "aws/codebuild/standard:3.0"
       Source:
         Type: CODEPIPELINE
         BuildSpec: !Sub |
