@@ -156,7 +156,7 @@
               "Environment": {
                 "ComputeType": "BUILD_GENERAL1_SMALL",
                 "Type": "LINUX_CONTAINER",
-                "Image": "aws/codebuild/nodejs:8.11.0"
+                "Image": "aws/codebuild/nodejs:12"
               },
               "Source": {
                 "Type": "CODEPIPELINE",
@@ -601,7 +601,7 @@
             "Environment": {
               "ComputeType": "BUILD_GENERAL1_SMALL",
               "Type": "LINUX_CONTAINER",
-              "Image": "aws/codebuild/nodejs:8.11.0"
+              "Image": "aws/codebuild/nodejs:12"
             },
             "Source": {
               "Type": "CODEPIPELINE",
@@ -901,7 +901,7 @@
     "isDashboardMonitoringPreconfigured": false
   },
   "package": {
-    "artifactDirectoryName": "serverless/serverless-react/dev/1605115042904-2020-11-11T17:17:22.904Z",
+    "artifactDirectoryName": "serverless/serverless-react/dev/1605115574515-2020-11-11T17:26:14.515Z",
     "artifact": ""
   }
 }
